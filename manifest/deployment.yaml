@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: read
+  namespace : bits-dissertation-86314
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: read
+  template:
+    metadata:
+      labels:
+        app: read
+    spec:
+      containers:
+      - name: read
+        image: bits2025.azurecr.io/bits-pilani-dissertation-ai:latest
+        ports:
+        - containerPort: 8888
+      imagePullSecrets:
+      - name: azure-bits-test-local
