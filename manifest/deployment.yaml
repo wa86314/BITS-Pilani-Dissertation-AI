@@ -5,6 +5,7 @@ metadata:
   namespace : bits-dissertation-86314
   annotations:
     argocd-image-updater.argoproj.io/image-list: bits2025.azurecr.io/bits-pilani-dissertation-ai
+    argocd-image-updater.argoproj.io/bits2025.azurecr.io/bits-pilani-dissertation-ai.update-strategy: latest
 spec:
   replicas: 1
   selector:
@@ -17,7 +18,7 @@ spec:
     spec:
       containers:
       - name: dissertation-ai
-        image: bits2025.azurecr.io/bits-pilani-dissertation-ai:43-b96a9b
+        image: bits2025.azurecr.io/bits-pilani-dissertation-ai
         imagePullPolicy: Always
         ports:
         - containerPort: 8888
