@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: dissertation-ai
-        image: bits2025.azurecr.io/bits-pilani-dissertation-ai:49-444f92
+        image: bits2025.azurecr.io/bits-pilani-dissertation-ai:50-8aa500
         imagePullPolicy: Always
         ports:
         - containerPort: 8888
