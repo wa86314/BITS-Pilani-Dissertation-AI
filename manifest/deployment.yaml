@@ -3,9 +3,6 @@ kind: Deployment
 metadata:
   name: dissertation-ai
   namespace : bits-dissertation-86314
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: bits2025.azurecr.io/bits-pilani-dissertation-ai
-    argocd-image-updater.argoproj.io/bits2025.azurecr.io/bits-pilani-dissertation-ai.update-strategy: latest
 spec:
   replicas: 1
   selector:
