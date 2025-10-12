@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dissertation-ai
-  namespace : bits-dissertation-86314
+  namespace : bits-dissertation
 spec:
   replicas: 1
   selector:
