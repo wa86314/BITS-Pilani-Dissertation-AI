@@ -17,6 +17,6 @@ AutoTokenizer.from_pretrained('bert-base-uncased')"
 WORKDIR /app
 COPY app.py .
 
-EXPOSE 8888
+EXPOSE 80
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8888"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
