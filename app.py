@@ -14,6 +14,7 @@ def predict(text: str):
     dataset = fill_mask(text)
     html = "<body>"
     for data in dataset:
-        html += f"<p>Sequence: {data['sequence']}, Score: {data['score']}</p>"
+        # html += f"<p>Sequence: {data['sequence']}, Score: {data['score']}</p>"
+        html += f"<p>Sequence: {data['sequence']}, Score: {data['score']:.6f}</p>"
     html += "</body>"
     return html
