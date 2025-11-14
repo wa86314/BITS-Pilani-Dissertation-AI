@@ -7,7 +7,7 @@ fill_mask = pipeline("fill-mask", model="bert-base-uncased")
 
 @app.get("/")
 def root():
-    return {"status": "<Main> Service is up and running"}
+    return {"status": "Main Service is up and running"}
 
 @app.get("/predict",response_class=HTMLResponse)
 def predict(text: str):
@@ -15,6 +15,6 @@ def predict(text: str):
     html = "<body>"
     for data in dataset:
         # html += f"<p>Sequence: {data['sequence']}, Score: {data['score']}</p>"
-        html += f"<p>Sequence: {data['sequence']}, Score: {data['score']:.6f}</p>"
+        html += f"<p>Main Sequence: {data['sequence']}, Score: {data['score']:.6f}</p>"
     html += "</body>"
     return html
